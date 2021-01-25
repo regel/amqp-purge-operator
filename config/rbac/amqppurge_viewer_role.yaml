@@ -1,0 +1,20 @@
+# permissions for end users to view amqppurges.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: amqppurge-viewer-role
+rules:
+- apiGroups:
+  - amqp.org
+  resources:
+  - amqppurges
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - amqp.org
+  resources:
+  - amqppurges/status
+  verbs:
+  - get

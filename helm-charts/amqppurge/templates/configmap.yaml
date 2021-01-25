@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "amqppurge.configName" . }}
+data:
+  amqpQueueName: {{ .Values.amqp.queueName | quote }}
+  amqpJsonPath: {{ .Values.amqp.jsonPath | quote }}

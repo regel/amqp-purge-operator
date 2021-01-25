@@ -1,0 +1,24 @@
+# permissions for end users to edit amqppurges.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: amqppurge-editor-role
+rules:
+- apiGroups:
+  - amqp.org
+  resources:
+  - amqppurges
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - amqp.org
+  resources:
+  - amqppurges/status
+  verbs:
+  - get

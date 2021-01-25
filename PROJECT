@@ -1,0 +1,8 @@
+domain: org
+layout: helm.sdk.operatorframework.io/v1
+projectName: amqp-purge-operator
+resources:
+- group: amqp
+  kind: AmqpPurge
+  version: v1alpha1
+version: 3-alpha
